@@ -1,30 +1,18 @@
 using Godot;
 using System;
 
-public partial class State : Node
+public abstract partial class State : Node
 {
 
 	[Signal]
 	public delegate void TransitionedEventHandler();
 
-	public void Enter()
-	{
-		return;
-	}
+	public abstract void Enter();
 
-	public void Exit()
-	{
-		return;
-	}
+	public abstract void Exit();
 
-	public void Update(double delta)
-	{
-		return;
-	}
+	public abstract void Update(double delta);
 
-	public void PhysicsUpdate(double delta)
-	{
-		return;
-	}
+	public abstract void PhysicsUpdate(double delta);
 
 }
